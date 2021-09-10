@@ -2,7 +2,7 @@
 
 Boring Avatars Ruby is a Ruby implementation of [Boring Avatars](https://github.com/boringdesigners/boring-avatars) by boringdesigners. It generates SVG based avatars from any username and color palette in a variety of forms.
 
-![boring avatars preview](https://github.com/CircleSD/boring-avatars-ruby/blob/main/public/boring-avatars-ruby-preview.png?raw=true)
+![boring avatars preview](https://github.com/CircleSD/boring_avatars_ruby/blob/main/public/boring-avatars-ruby-preview.png?raw=true)
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
