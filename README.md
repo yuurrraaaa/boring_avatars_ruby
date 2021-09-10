@@ -31,7 +31,7 @@ gem install boring_avatars_ruby
 Creating an avatar with default properties and returning a string containing the SVG output
 
 ```ruby
-avatar = BoringAvatarsRuby::AvatarMarble.new({name: "Grace Hopper"})
+avatar = BoringAvatarsRuby::Avatar.create({name: "Grace Hopper"})
 ```
 
 Overriding default property values
