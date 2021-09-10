@@ -4,6 +4,7 @@ Boring Avatars Ruby is a Ruby implementation of [Boring Avatars](https://github.
 
 ![boring avatars preview](https://github.com/CircleSD/boring_avatars_ruby/blob/main/public/boring-avatars-ruby-preview.png?raw=true)
 
+![Build Status](https://github.com/CircleSD/boring_avatars_ruby/actions/workflows/main.yml/badge.svg?branch=main)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Installation
