@@ -1,0 +1,17 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+require "bundler/setup"
+require "boring_avatars_ruby"
+
+# a quick script to create examples of each avatar variant
+avatar = BoringAvatarsRuby::AvatarIdenticon.new({name: "Fred"})
+avatar.save("tmp/identicon_fred.svg")
+avatar = BoringAvatarsRuby::AvatarMarble.new({name: "Fred"})
+avatar.save("tmp/marble_fred.svg")
+avatar = BoringAvatarsRuby::AvatarPixel.new({name: "Fred"})
+avatar.save("tmp/pixel_fred.svg")
+avatar = BoringAvatarsRuby::AvatarRing.new({name: "Fred"})
+avatar.save("tmp/ring_fred.svg")
+avatar = BoringAvatarsRuby::AvatarSunset.new({name: "Fred"})
+avatar.save("tmp/sunset_fred.svg")
