@@ -38,14 +38,7 @@ RSpec.describe BoringAvatarsRuby::AvatarIdenticon do
     }.to raise_error("invalid border size")
   end
 
-  it "should save svg avatar to a given file name" do
-    avatar = BoringAvatarsRuby::AvatarIdenticon.new({name: "Fred Spec"})
-    expect(avatar.svg.nil?).to be_falsey
-    avatar.save("tmp/identicon_fred_spec.svg")
-    expect(File.exist?("tmp/identicon_fred_spec.svg")).to be_truthy
-  end
-
-  it "should save svg avatar with custom colors and size" do
+  it "should create an svg avatar with custom colors and size" do
     avatar = BoringAvatarsRuby::AvatarIdenticon.new({
       name: "Grace Hopper",
       colors: ["#264653", "#2a9d8f", "#e9c46a", "#f4a261", "#e76f51"],
@@ -54,7 +47,5 @@ RSpec.describe BoringAvatarsRuby::AvatarIdenticon do
       background_color: "#4488BB"
     })
     expect(avatar.svg.nil?).to be_falsey
-    avatar.save("tmp/identicon_grace_spec.svg")
-    expect(File.exist?("tmp/identicon_grace_spec.svg")).to be_truthy
   end
 end
