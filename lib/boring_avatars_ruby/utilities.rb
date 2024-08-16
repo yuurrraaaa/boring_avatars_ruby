@@ -25,5 +25,18 @@ module BoringAvatarsRuby
         value
       end
     end
+
+    def self.get_contrast(hexcolor)
+      hexcolor = hexcolor.slice(1) if hexcolor.slice(0, 1) == '#'
+      r        = hexcolor[0..1].to_i
+      g        = hexcolor[2..3].to_i
+      b        = hexcolor[4..5].to_i
+      yiq      = ((r * 299) + (g * 587) + (b * 114)) / 1000
+      yiq >= 128 ? '#000000' : '#FFFFFF'
+    end
+
+    def self.get_boolean(number, ntn)
+      get_digit(number, ntn) % 2 == 1
+    end
   end
 end

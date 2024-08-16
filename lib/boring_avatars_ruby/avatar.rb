@@ -36,7 +36,7 @@ module BoringAvatarsRuby
       key: "\x00\x11\x22\x33\x44\x55\x66\x77\x88\x99\xAA\xBB\xCC\xDD\xEE\xFF"
     }
 
-    VARIANTS = [:identicon, :marble, :pixel, :ring, :sunset]
+    VARIANTS = [:identicon, :marble, :pixel, :ring, :sunset, :beam, :bauhaus]
 
     def save(filename)
       File.open(filename, "wb") { |f| f.write(@svg) }

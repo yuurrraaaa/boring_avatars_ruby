@@ -77,4 +77,28 @@ RSpec.describe BoringAvatarsRuby::Avatar do
     expect(avatar.class).to eq(BoringAvatarsRuby::AvatarSunset)
     expect(avatar.svg.nil?).to be_falsey
   end
+
+  it "should create a Beam avatar object using the supplied options" do
+    avatar = BoringAvatarsRuby::Avatar.create({
+      colors: ["#264653", "#2a9d8f", "#e9c46a", "#f4a261", "#e76f51"],
+      name: "Grace Hopper",
+      size: 120,
+      variant: :beam
+    })
+
+    expect(avatar.class).to eq(BoringAvatarsRuby::AvatarBeam)
+    expect(avatar.svg.nil?).to be_falsey
+  end
+
+  it "should create a Bauhaus avatar object using the supplied options" do
+    avatar = BoringAvatarsRuby::Avatar.create({
+      colors: ["#264653", "#2a9d8f", "#e9c46a", "#f4a261", "#e76f51"],
+      name: "Grace Hopper",
+      size: 120,
+      variant: :bauhaus
+    })
+
+    expect(avatar.class).to eq(BoringAvatarsRuby::AvatarBauhaus)
+    expect(avatar.svg.nil?).to be_falsey
+  end
 end

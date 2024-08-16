@@ -9,6 +9,8 @@ require_relative "boring_avatars_ruby/avatar_marble"
 require_relative "boring_avatars_ruby/avatar_pixel"
 require_relative "boring_avatars_ruby/avatar_ring"
 require_relative "boring_avatars_ruby/avatar_sunset"
+require_relative "boring_avatars_ruby/avatar_beam"
+require_relative "boring_avatars_ruby/avatar_bauhaus"
 
 module BoringAvatarsRuby
   class Error < StandardError; end

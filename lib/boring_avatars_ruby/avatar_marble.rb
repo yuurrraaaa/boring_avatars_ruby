@@ -55,7 +55,7 @@ module BoringAvatarsRuby
       num_from_name = Utilities.get_number(name)
       range = colors&.size
 
-      ELEMENTS.times.map.with_index do |element, i|
+      ELEMENTS.times.map.with_index do |_element, i|
         {
           color: Utilities.get_random_color(num_from_name + i, colors, range),
           translate_x: Utilities.get_unit(num_from_name * (i + 1), SIZE / 10, 1),
