@@ -59,13 +59,13 @@ Additionally, an `identicon` variant has been ported from [Ruby Identicon](https
 
 ### Properties
 
-| Property | Type                                                         |
-| -------- | ------------------------------------------------------------ |
-| size     | number (verical and horizontal size in pixels)               |
-| square   | boolean (a square avatar is created if `true`)               |
-| name     | string                                                       |
-| variant  | one of: `:marble`, `:pixel`, `:ring`, `:sunset`, `:identicon`|
-| colors   | array of colors in rgb notation                              |
+| Property | Type                                                                               |
+| -------- |------------------------------------------------------------------------------------|
+| size     | number (verical and horizontal size in pixels)                                     |
+| square   | boolean (a square avatar is created if `true`)                                     |
+| name     | string                                                                             |
+| variant  | one of: `:marble`, `:pixel`, `:ring`, `:sunset`, `:identicon`, `:beam`, `:bauhaus` |
+| colors   | array of colors in rgb notation                                                    |
 
 The `identicon` variant ignores the `color`, `size` and `square` properties and has the following additional properties: -
 
