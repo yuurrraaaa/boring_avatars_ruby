@@ -8,6 +8,7 @@ module BoringAvatarsRuby
     def initialize(options = {})
       options = DEFAULT_OPTIONS.merge(options)
       properties = generate_colors(options[:name], options[:colors])
+      mask_id = Utilities.mask_id
 
       @svg = <<~SVG
         <svg
@@ -17,10 +18,10 @@ module BoringAvatarsRuby
           width="#{options[:size]}"
           height="#{options[:size]}"
         >
-          <mask id="mask__ring" maskUnits="userSpaceOnUse" x="0" y="0" width="#{SIZE}" height="#{SIZE}">
+          <mask id="#{mask_id}" maskUnits="userSpaceOnUse" x="0" y="0" width="#{SIZE}" height="#{SIZE}">
             <rect width="#{SIZE}" height="#{SIZE}" rx="#{options[:square] ? "" : SIZE * 2}" fill="white"></rect>
           </mask>
-          <g mask="url(#mask__ring)">
+          <g mask="url(##{mask_id})">
             <path d="M0 0h90v45H0z" fill="#{properties[0][:color]}"></path>
             <path d="M0 45h90v45H0z" fill="#{properties[1][:color]}"></path>
             <path d="M83 45a38 38 0 00-76 0h76z" fill="#{properties[2][:color]}"></path>

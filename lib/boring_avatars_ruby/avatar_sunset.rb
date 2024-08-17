@@ -9,6 +9,7 @@ module BoringAvatarsRuby
       options = DEFAULT_OPTIONS.merge(options)
       properties = generate_colors(options[:name], options[:colors])
       name = options[:name].to_s.delete(" \t\r\n")
+      mask_id = Utilities.mask_id
 
       @svg = <<~SVG
         <svg
@@ -18,10 +19,10 @@ module BoringAvatarsRuby
           width="#{options[:size]}"
           height="#{options[:size]}"
         >
-          <mask id="mask__sunset" maskUnits="userSpaceOnUse" x="0" y="0" width="#{SIZE}" height="#{SIZE}">
+          <mask id="#{mask_id}" maskUnits="userSpaceOnUse" x="0" y="0" width="#{SIZE}" height="#{SIZE}">
             <rect width="#{SIZE}" height="#{SIZE}" rx="#{options[:square] ? "" : SIZE * 2}" fill="white"></rect>
           </mask>
-          <g mask="url(#mask__sunset)">
+          <g mask="url(##{mask_id})">
             <path fill="url(#gradient_paint0_linear_#{name})" d="M0 0h80v40H0z"></path>
             <path fill="url(#gradient_paint1_linear_#{name})" d="M0 40h80v40H0z"></path>
           </g>

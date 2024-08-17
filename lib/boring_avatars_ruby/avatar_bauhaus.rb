@@ -8,7 +8,7 @@ module BoringAvatarsRuby
     def initialize(options = {})
       options    = DEFAULT_OPTIONS.merge(options)
       properties = generate_colors(options[:name], options[:colors])
-      mask_id    = 'm123'
+      mask_id    = Utilities.mask_id
 
       @svg = <<~SVG
                <svg

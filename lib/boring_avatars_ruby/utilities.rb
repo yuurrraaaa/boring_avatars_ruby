@@ -38,5 +38,13 @@ module BoringAvatarsRuby
     def self.get_boolean(number, ntn)
       get_digit(number, ntn) % 2 == 1
     end
+
+    def self.mask_id
+      "m_#{rand_id}"
+    end
+
+    def self.rand_id
+      (1 + rand.to_f * 0x10000).floor.to_s(16)[1..16].to_i(16)
+    end
   end
 end

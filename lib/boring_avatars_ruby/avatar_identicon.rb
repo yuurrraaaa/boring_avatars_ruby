@@ -5,6 +5,7 @@ module BoringAvatarsRuby
     def initialize(options = {})
       options = DEFAULT_OPTIONS.merge(options)
       size = (options[:grid_size] * options[:square_size]) + (options[:border_size] * 2)
+      mask_id = Utilities.mask_id
 
       @svg = <<~SVG
         <svg
@@ -15,7 +16,7 @@ module BoringAvatarsRuby
           height="#{size}"
         >
           <mask
-            id="mask0"
+            id="#{mask_id}"
             mask-type="alpha"
             maskUnits="userSpaceOnUse"
             x="0"
@@ -25,7 +26,7 @@ module BoringAvatarsRuby
           >
             <rect width="#{size}" height="#{size}" fill="white"></rect>
           </mask>
-          <g mask="url(#mask0)">
+          <g mask="url(##{mask_id})">
             #{"<rect width=\"#{size}\" height=\"#{size}\" fill=\"#{options[:background_color]}\"></rect>" unless options[:background_color] == :transparent}
             #{generate_identicon(options).join("\n")} 
           </g>
